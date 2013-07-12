@@ -16,6 +16,8 @@ db.open(function(err, db) {
                 populateDB();
             }
         });
+    } else {
+        console.error("Unable to connect to 'winedb' database. Error = " + err);
     }
 });
 
@@ -50,7 +52,7 @@ exports.addWine = function(req, res) {
             }
         });
     });
-}
+};
 
 exports.updateWine = function(req, res) {
     var id = req.params.id;
@@ -69,7 +71,7 @@ exports.updateWine = function(req, res) {
             }
         });
     });
-}
+};
 
 exports.deleteWine = function(req, res) {
     var id = req.params.id;
@@ -84,7 +86,7 @@ exports.deleteWine = function(req, res) {
             }
         });
     });
-}
+};
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 // Populate database with sample data -- Only used once: the first time the application is started.

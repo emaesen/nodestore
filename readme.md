@@ -1,37 +1,52 @@
-# Node Cellar Sample Application with Backbone.js, Twitter Bootstrap, Node.js, Express, and MongoDB #
+# Node Store Application with Backbone.js, Twitter Bootstrap, Node.js, Express, and MongoDB #
 
-"Node Cellar" is a sample CRUD application built with with Backbone.js, Twitter Bootstrap, Node.js, Express, and MongoDB.
-
-The application allows you to browse through a list of wines, as well as add, update, and delete wines.
-
-This application is further documented [here](http://coenraets.org/blog).
-
-The application is also hosted online. You can test it [here](http://nodecellar.coenraets.org).
+"Node Store" is a CRUD application built with with Backbone.js, Twitter Bootstrap, Node.js, Express, and MongoDB.
 
 
-## To run the application on your own Heroku account:##
+## Installation ##
 
-1. Install the [Heroku Toolbelt](http://toolbelt.heroku.com)
+1. Clone this repo
+2. cd into the repo directory:
+```
+$ cd nodestore
+```
 
-2. [Sign up](http://heroku.com/signup) for a Heroku account
+### To run the application on your own Heroku account:###
 
-3. Login to Heroku from the `heroku` CLI:
+3. Install the [Heroku Toolbelt](http://toolbelt.heroku.com)
+4. [Sign up](http://heroku.com/signup) for a Heroku account
+5. Login to Heroku from the `heroku` CLI:
+```
+    $ heroku login
+```
+6. Create a new app on Heroku:
+```
+    $ heroku create
+```
+7. Add the [MongoLab Heroku (sandbox) Add-on](http://addons.heroku.com/mongolab)
+```
+    $ heroku addons:add mongolab:sandbox
+```
+8. Upload the app to Heroku:
+```
+    $ git push heroku master
+```
+9. Open the app in your browser:
+```
+    $ heroku open
+```
 
-        $ heroku login
-
-4. Create a new app on Heroku:
-
-        $ heroku create
-
-5. Add the [MongoLab Heroku Add-on](http://addons.heroku.com/mongolab)
-
-        $ heroku addons:add mongolab
-
-6. Upload the app to Heroku:
-
-        $ git push heroku master
-
-7. Open the app in your browser:
-
-        $ heroku open
-
+### To run the application locally:###
+3. Install [MongoDB](http://docs.mongodb.org/manual/installation/)
+4. Start MongoDB
+```
+    $ mongod
+```
+5. Install all dependencies
+```
+    $ [sudo] npm install
+```
+6. Start the web server (in a different command tab)
+```
+    $ node server
+```
